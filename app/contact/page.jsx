@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FaPhone } from "react-icons/fa"
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { useState } from "react";
 
 const info =[
   {
@@ -25,6 +26,9 @@ const info =[
 ]
 
 const page = () => {
+  const [iputData,setInputData]=useState({
+
+  })
   return (
     <>
       <div className="container mx-auto">
@@ -35,11 +39,11 @@ const page = () => {
               <h3 className="text-2xl text-accent">Let's work together</h3>
               <p className="text-white/60 lg:mt-3">Lorem, ipsum dolor sit amet consectetur.</p>
               {/* input  */}
-              <div className="grid-cols-1 grid lg:grid-cols-2 gap-4 my-3">
+              <div className="grid-cols-1 grid lg:grid-cols-2 gap-5 my-3">
                 <Input type="text" placeholder="Firstname" />
                 <Input type="text" placeholder="Lirstname" />
                 <Input type="text" placeholder="Email address" />
-                <Input type="text" placeholder="Phone number" />
+                <Input type="password" placeholder="Password" />
               </div>
               <div className="">
                 <select className="w-full bg-primary p-2 px-2 rounded-md outline-none">
