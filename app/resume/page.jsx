@@ -59,8 +59,8 @@ const experience = {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam magni magnam tempora, sunt at?",
   items: [
     {
-      company: "digital Agency  ",
-      position: " Operator ",
+      company: "Digital Agency  ",
+      position: " Operator Developer ",
       duration: " 2018 ",
     },
     {
@@ -83,6 +83,11 @@ const experience = {
       company: "Front-end Developer  ",
       position: " Junior Developer ",
       duration: " 2024 ",
+    },
+    {
+      company: "Net Web Soluation ",
+      position: " Web  Designer",
+      duration: " Summer 2023 ",
     },
   ],
 };
@@ -195,28 +200,55 @@ const Resume = () => {
           </TabsList>
 
           {/* content  */}
-          <div className="min-h-[80vh] w-full" >
+          <div className="min-h-[80vh] w-full">
             {/* experience  */}
-            <TabsContent value='experience' className='w-full'>
-              experience
+            <TabsContent value="experience" className="w-full">
+              <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
+                <h3 className="text-3xl font-bold">{experience.title}</h3>
+                <p className="max-w-[600px]">{experience.description}</p>
+                <ScrollArea className="h-[400px]">
+                  {/* <ul className="gird grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {
+                      experience.items.map((ele,index)=>{
+                        return (
+                          <li key={index} className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start">
+                            <span className="text-accent">{ele.duration}</span>
+                            <h3 className="text-xl">{ele.position}</h3>
+                            <div>
+                              <span></span>
+                              <p>{ele.company}</p>
+                            </div>
+                          </li>
+                          
+                        )
+                      })
+                    }
+                  </ul> */}
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {experience.items.map((ele, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start rounded-md"
+                        >
+                          <span className="text-accent">{ele.duration}</span>
+                          <h3 className="text-xl">{ele.position}</h3>
+                          <div >
+                            <p>{ele.company}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
             {/* education  */}
-            <TabsContent value='education' >
-            Education
-
-            </TabsContent>
+            <TabsContent value="education">Education</TabsContent>
             {/* skill  */}
 
-            <TabsContent value='skill' >
-            skill
-
-            </TabsContent>
-            <TabsContent value='about' >
-            about
-
-            </TabsContent>
-
-
+            <TabsContent value="skill">skill</TabsContent>
+            <TabsContent value="about">about</TabsContent>
           </div>
         </Tabs>
       </div>
