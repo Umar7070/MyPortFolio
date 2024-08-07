@@ -23,7 +23,7 @@ const State = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <div className="flex flex-wrap  gap-6 max-w-[80vw] mx-auto xl:max-w-none my-5">
+        <div className="flex flex-wrap  gap-6 max-w-[80vw] mx-auto xl:max-w-none my-3">
           {stateCountup.map((ele, index) => {
             return (
               <div className="flex-1 flex gap-4 justify-center items-center xl:justify-start my-10">
