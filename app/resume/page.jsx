@@ -46,7 +46,7 @@ const about = {
     },
     {
       fieldname: "Language",
-      fielvalue: "English ,Arabic , Urdu ,Punjabi ",
+      fielvalue: " English , Arabic , Urdu ,Punjabi ",
     },
   ],
 };
@@ -204,13 +204,12 @@ const Resume = () => {
             <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
 
-          {/* content  */}
           <div className="min-h-[80vh] w-full">
             {/* experience  */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
-                <h3 className="text-3xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px]">{experience.description}</p>
+                <h3 className="text-3xl font-semibold">{experience.title}</h3>
+                <p className="text-white/60  ">{experience.description}</p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((ele, index) => {
@@ -234,8 +233,8 @@ const Resume = () => {
             {/* education  */}
             <TabsContent value="education">
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
-                <h3 className="text-3xl font-bold">{education.title}</h3>
-                <p className="max-w-[600px]">{education.description}</p>
+                <h3 className="text-3xl font-semibold">{education.title}</h3>
+                <p className=" text-white/60 ">{education.description}</p>
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((ele, index) => {
@@ -261,8 +260,8 @@ const Resume = () => {
             <TabsContent value="skill">
               <div>
                 <div>
-                  <h3 className="text-3xl font-semibold">{skill.title}</h3>
-                  <h3 className="text-white/60">{skill.description}</h3>
+                  <h3 className="text-3xl text-center lg:text-start font-semibold">{skill.title}</h3>
+                  <h3 className="text-white/60 my-2 gap-y-5  font-semibold">{skill.description}</h3>
                 </div>
                 <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] my-4">
                   {skill.skillList.map((ele, index) => {
@@ -286,7 +285,24 @@ const Resume = () => {
                 </ul>
               </div>
             </TabsContent>
-            <TabsContent value="about">about</TabsContent>
+            {/* about  */}
+            <TabsContent value="about">
+              <div>
+                <h3 className="text-3xl font-semibold text-center lg:text-start">{about.title}</h3>
+                <h3 className="text-white/60 my-2 gap-y-5">{about.description}</h3>
+                <ul className="grid grid-col-1 lg:grid-cols-2">{about.info.map((ele,index)=>{
+                  return  (
+                    <li key={index} className="flex justify-center items-center">
+                      {/* {ele.fieldname} */}
+                      <span>{ele.fieldname}</span>
+                      <span>{ele.fielvalue}</span>
+
+                    </li>
+                  )
+                })}</ul>
+              </div>
+
+            </TabsContent>
           </div>
         </Tabs>
       </div>
