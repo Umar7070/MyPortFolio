@@ -2,10 +2,10 @@ import React from 'react'
 
 const Work = () => {
   return (
-    <div>
-        work page
+    <>
+    work
       
-    </div>
+    </>
   )
 }
 

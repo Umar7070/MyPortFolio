@@ -102,7 +102,7 @@ const education = {
   items: [
     {
       institutaion: "Online course Plateform",
-      degree: "Front-end Developer Bootcamp",
+      degree: "Front-end Developer ",
       duration: "2023",
     },
     {
@@ -124,6 +124,11 @@ const education = {
       institutaion: "Design College",
       degree: "MCA",
       duration: "2020-2022",
+    },
+    {
+      institutaion: "Online course",
+      degree: "Programing Course",
+      duration: "2021",
     },
   ],
 };
@@ -207,23 +212,6 @@ const Resume = () => {
                 <h3 className="text-3xl font-bold">{experience.title}</h3>
                 <p className="max-w-[600px]">{experience.description}</p>
                 <ScrollArea className="h-[400px]">
-                  {/* <ul className="gird grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {
-                      experience.items.map((ele,index)=>{
-                        return (
-                          <li key={index} className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start">
-                            <span className="text-accent">{ele.duration}</span>
-                            <h3 className="text-xl">{ele.position}</h3>
-                            <div>
-                              <span></span>
-                              <p>{ele.company}</p>
-                            </div>
-                          </li>
-                          
-                        )
-                      })
-                    }
-                  </ul> */}
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((ele, index) => {
                       return (
@@ -233,7 +221,7 @@ const Resume = () => {
                         >
                           <span className="text-accent">{ele.duration}</span>
                           <h3 className="text-xl">{ele.position}</h3>
-                          <div >
+                          <div>
                             <p>{ele.company}</p>
                           </div>
                         </li>
@@ -244,10 +232,60 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* education  */}
-            <TabsContent value="education">Education</TabsContent>
+            <TabsContent value="education">
+              <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
+                <h3 className="text-3xl font-bold">{education.title}</h3>
+                <p className="max-w-[600px]">{education.description}</p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {education.items.map((ele, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start rounded-md"
+                        >
+                          <span className="text-accent">{ele.duration}</span>
+                          <h3 className="text-xl">{ele.degree}</h3>
+                          <div>
+                            <p>{ele.institutaion}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
             {/* skill  */}
 
-            <TabsContent value="skill">skill</TabsContent>
+            <TabsContent value="skill">
+              <div>
+                <div>
+                  <h3 className="text-3xl font-semibold">{skill.title}</h3>
+                  <h3 className="text-white/60">{skill.description}</h3>
+                </div>
+                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] my-4">
+                  {skill.skillList.map((ele, index) => {
+                    return (
+                      <li>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-lg flex justify-center items-center gap-[30px]">
+                              <div className="text-3xl hover:text-accent transition-all duration-300 ">
+                                {ele.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitaLize">{ele.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
             <TabsContent value="about">about</TabsContent>
           </div>
         </Tabs>
