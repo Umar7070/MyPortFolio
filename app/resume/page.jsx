@@ -56,7 +56,7 @@ const experience = {
   icon: "/assets/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam magni magnam tempora, sunt at?",
+    "I have 6 month experience as a Front-end Developer as well as  i have done 3 month internship as a React Js Developer",
   items: [
     {
       company: "Digital Agency  ",
@@ -98,7 +98,7 @@ const education = {
   icon: "/assets/badge.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam magni magnam tempora, sunt at?",
+    "I have Completed My Master Of Computer Application From KMC University,Lucknow",
   items: [
     {
       institutaion: "Online course Plateform",
@@ -137,7 +137,7 @@ const education = {
 const skill = {
   title: "My Skill",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam magni magnam tempora, sunt at?",
+    "  My skills are Html Css Bootstrap ,Tailwindcss Javascript React Js Next Js TypeScript",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -204,13 +204,13 @@ const Resume = () => {
             <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
 
-          <div className="min-h-[80vh] w-full">
+          <div className=" w-full">
             {/* experience  */}
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="experience">
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
                 <h3 className="text-3xl font-semibold">{experience.title}</h3>
                 <p className="text-white/60  ">{experience.description}</p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[350px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((ele, index) => {
                       return (
@@ -235,7 +235,7 @@ const Resume = () => {
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
                 <h3 className="text-3xl font-semibold">{education.title}</h3>
                 <p className=" text-white/60 ">{education.description}</p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[350px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((ele, index) => {
                       return (
@@ -258,50 +258,55 @@ const Resume = () => {
             {/* skill  */}
 
             <TabsContent value="skill">
-              <div>
-                <div>
-                  <h3 className="text-3xl text-center lg:text-start font-semibold">{skill.title}</h3>
-                  <h3 className="text-white/60 my-2 gap-y-5  font-semibold">{skill.description}</h3>
-                </div>
-                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] my-4">
-                  {skill.skillList.map((ele, index) => {
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-3xl text-center lg:text-start font-semibold">
+                  {skill.title}
+                </h3>
+                <p className="text-white/60 ">{skill.description}</p>
+              </div>
+              <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] my-4">
+                {skill.skillList.map((ele, index) => {
+                  return (
+                    <li>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-lg flex justify-center items-center gap-[30px]">
+                            <div className="text-3xl hover:text-accent transition-all duration-300 ">
+                              {ele.icon}
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className="capitaLize">{ele.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  );
+                })}
+              </ul>
+            </TabsContent>
+            {/* about  */}
+            <TabsContent value="about">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-3xl font-semibold text-center lg:text-start">
+                  {about.title}
+                </h3>
+                <p className="text-white/60 ">{about.description}</p>
+                <ul className="grid grid-col-1 lg:grid-cols-2 gap-y-6">
+                  {about.info.map((ele, index) => {
                     return (
-                      <li>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-lg flex justify-center items-center gap-[30px]">
-                              <div className="text-3xl hover:text-accent transition-all duration-300 ">
-                                {ele.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitaLize">{ele.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
+                      <li
+                        key={index}
+                        className="flex justify-center items-center lg:justify-start gap-4"
+                      >
+                        {/* {ele.fieldname} */}
+                        <span className="text-white/60">{ele.fieldname}</span>
+                        <span className="text-xl">{ele.fielvalue}</span>
                       </li>
                     );
                   })}
                 </ul>
               </div>
-            </TabsContent>
-            {/* about  */}
-            <TabsContent value="about">
-              <div className="flex flex-col gap-[30px]">
-                <h3 className="text-3xl font-semibold text-center lg:text-start">{about.title}</h3>
-                <h3 className="text-white/60 my-2 gap-y-5">{about.description}</h3>
-                <ul className="grid grid-col-1 lg:grid-cols-2 gap-y-6">{about.info.map((ele,index)=>{
-                  return  (
-                    <li key={index} className="flex justify-center items-center lg:justify-start gap-4">
-                      {/* {ele.fieldname} */}
-                      <span className="text-white/60">{ele.fieldname}</span>
-                      <span className="text-xl">{ele.fielvalue}</span>
-
-                    </li>
-                  )
-                })}</ul>
-              </div>
-
             </TabsContent>
           </div>
         </Tabs>
