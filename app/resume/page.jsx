@@ -287,15 +287,15 @@ const Resume = () => {
             </TabsContent>
             {/* about  */}
             <TabsContent value="about">
-              <div>
+              <div className="flex flex-col gap-[30px]">
                 <h3 className="text-3xl font-semibold text-center lg:text-start">{about.title}</h3>
                 <h3 className="text-white/60 my-2 gap-y-5">{about.description}</h3>
-                <ul className="grid grid-col-1 lg:grid-cols-2">{about.info.map((ele,index)=>{
+                <ul className="grid grid-col-1 lg:grid-cols-2 gap-y-6">{about.info.map((ele,index)=>{
                   return  (
-                    <li key={index} className="flex justify-center items-center">
+                    <li key={index} className="flex justify-center items-center lg:justify-start gap-4">
                       {/* {ele.fieldname} */}
-                      <span>{ele.fieldname}</span>
-                      <span>{ele.fielvalue}</span>
+                      <span className="text-white/60">{ele.fieldname}</span>
+                      <span className="text-xl">{ele.fielvalue}</span>
 
                     </li>
                   )
