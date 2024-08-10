@@ -12,8 +12,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 const about = {
   title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero veniam magni magnam tempora, sunt at?",
+  description:"My name is MOHAMMAD UMAR basically i'm from BANARAS i have completed my master of computer application (MCA) from KMCL University Lucknow. ",
 
   info: [
     {
@@ -29,8 +28,8 @@ const about = {
       fielvalue: "0.6 month",
     },
     {
-      fieldname: "Skype",
-      fielvalue: "Mohammad Umar",
+      fieldname: "LinkedIn",
+      fielvalue: " Umar Mohammad ",
     },
     {
       fieldname: "Nationality",

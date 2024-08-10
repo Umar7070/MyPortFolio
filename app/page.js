@@ -14,7 +14,7 @@ const page = () => {
             <span>Front-end Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />
-              <span className="text-accent">Mohammad Umar</span>
+              <span className="text-accent"> Umar Mohammad </span>
             </h1>
             <p className="max-w-[500px] text-white/80">
               i excel at crafting elegent digital experiences and i am

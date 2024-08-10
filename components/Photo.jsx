@@ -1,4 +1,3 @@
-
 "use client";
 
 import { easeIn, easeInOut, motion } from "framer-motion";

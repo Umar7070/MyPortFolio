@@ -1,4 +1,3 @@
-// import React from 'react'
 "use client";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,6 +10,7 @@ import {
 import { BaArrowUpRight, BsGithub } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const project = [
   {
@@ -30,7 +30,7 @@ const project = [
         name: "javascript ",
       },
     ],
-    image: "/",
+    image: "/assets/thumb3.png",
     live: "",
     github: "",
   },
@@ -52,7 +52,7 @@ const project = [
         name: "Node js ",
       },
     ],
-    image: "/",
+    image: "/assets/thumb1.png",
     live: "",
     github: "",
   },
@@ -70,18 +70,34 @@ const project = [
       {
         name: "BootStrap ",
       },
-      
     ],
-    image: "/",
+    image: "/assets/thumb1.png",
     live: "",
     github: "",
   },
 ];
 
 const Work = () => {
+  const [data,setData]=useState()
   return (
     <>
-      <div className="container mx-auto">work</div>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}}
+    className="min-h-[80vh] flex flex-col justify-center "
+    >
+
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row lg:gap-[30px]">
+          <div className="w-full ">
+           <div>
+            <div>{project.num}project</div>
+           </div>
+          </div>
+          <div className="w-full">slider</div>
+        </div>
+        
+
+      </div>
+    </motion.div>
     </>
   );
 };
