@@ -17,8 +17,7 @@ const project = [
     num: "01",
     category: "front-end",
     title: "project 1",
-    description:
-      "Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
+    description:"Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
     stack: [
       {
         name: "Html5 ",
@@ -38,7 +37,7 @@ const project = [
   {
     num: "02",
     category: "Fullstack Developer",
-    title: "project 1",
+    title: "project 02",
     description:
       "Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
     stack: [
@@ -60,7 +59,7 @@ const project = [
   {
     num: "03",
     category: "front-end",
-    title: "project 1",
+    title: "project 03",
     description:
       "Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
     stack: [
@@ -78,26 +77,44 @@ const project = [
 ];
 
 const Work = () => {
-  const [data,setData]=useState()
+  const [data, setData] = useState();
   return (
     <>
-    <motion.div initial={{opacity:0}} animate={{opacity:1}}
-    className="min-h-[80vh] flex flex-col justify-center "
-    >
-
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row lg:gap-[30px]">
-          <div className="w-full ">
-           <div>
-            <div>{project.num}project</div>
-           </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="min-h-[80vh] flex flex-col justify-center "
+      >
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:gap-[30px]">
+            <div className="w-full ">
+              <div>
+                {project.map((curEle, index) => {
+                  return (
+                    <>
+                      <div>
+                        <div className="text-3xl leading-none ">{curEle.num}</div>
+                        <h3 className="text-accent text-3xl">{curEle.category}</h3>
+                        <p className="text-white/60">{curEle.description}</p>
+                        <ul className="flex gap-4">
+                          {curEle.stack.map((curEle, index) => {
+                            return (
+                              <>
+                                <li className="text-accent">{curEle.name}</li>
+                              </>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="w-full">slider</div>
           </div>
-          <div className="w-full">slider</div>
         </div>
-        
-
-      </div>
-    </motion.div>
+      </motion.div>
     </>
   );
 };
