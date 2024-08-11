@@ -7,17 +7,21 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { BaArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+// import { MdArrowOutward } from "react-icons/md";
+import { GoArrowUpRight } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const project = [
+const projects = [
   {
     num: "01",
     category: "front-end",
     title: "project 1",
-    description:"Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
+    description:
+      "Reprehenderit tempora, quo nobis  consequatur voluptatum odit repudiandae doloribus.",
     stack: [
       {
         name: "Html5 ",
@@ -31,7 +35,7 @@ const project = [
     ],
     image: "/assets/thumb3.png",
     live: "",
-    github: "",
+    github: "https://github.com/Umar7070/myportfolio",
   },
 
   {
@@ -53,7 +57,7 @@ const project = [
     ],
     image: "/assets/thumb1.png",
     live: "",
-    github: "",
+    github: "https://github.com/Umar7070/myportfolio",
   },
 
   {
@@ -72,12 +76,12 @@ const project = [
     ],
     image: "/assets/thumb1.png",
     live: "",
-    github: "",
+    github: "https://github.com/Umar7070/myportfolio",
   },
 ];
 
 const Work = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState(projects[0]);
   return (
     <>
       <motion.div
@@ -86,32 +90,59 @@ const Work = () => {
         className="min-h-[80vh] flex flex-col justify-center "
       >
         <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row lg:gap-[30px]">
-            <div className="w-full ">
+          <div className="flex flex-col md:flex-row xl:gap-[30px]">
+            <div className="w-full  ">
               <div>
-                {project.map((curEle, index) => {
+                <div className="text-5xl font-semibold text-outline text-transparent hover:text-outline-hover transition-all duration-500">
+                  {data.num}
+                </div>
+                <h2 className="text-3xl">{data.category}project</h2>
+                <p className="text-white/60">{data.description}</p>
+              </div>
+              <ul className="flex gap-4 text-accent">
+                {data.stack.map((curEle, index) => {
                   return (
-                    <>
-                      <div>
-                        <div className="text-3xl leading-none ">{curEle.num}</div>
-                        <h3 className="text-accent text-3xl">{curEle.category}</h3>
-                        <p className="text-white/60">{curEle.description}</p>
-                        <ul className="flex gap-4">
-                          {curEle.stack.map((curEle, index) => {
-                            return (
-                              <>
-                                <li className="text-accent">{curEle.name}</li>
-                              </>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    </>
+                    <li>
+                      {curEle.name},
+                      {/* {index!== data.projects.stack.length -1 && ','} */}
+                    </li>
                   );
                 })}
+              </ul>
+              <div className="border border-white/20"></div>
+              <div className="flex gap-4 my-5">
+                <div>
+                  <Link href={data.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[30px] h-[30px] rounded-full bg-white/5 flex justify-center items-center">
+                          <GoArrowUpRight className="text-white text-2xl hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p >live project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
+                <div>
+                  <Link href={data.github}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[30px] h-[30px] rounded-full bg-white/5 flex justify-center items-center">
+                          <BsGithub className="text-white text-2xl hover:text-accent capitalize" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Github Repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="w-full">slider</div>
+
+            <div className="w-full ">slider</div>
           </div>
         </div>
       </motion.div>
