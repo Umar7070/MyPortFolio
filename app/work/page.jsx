@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
 import {
   Tooltip,
   TooltipContent,
@@ -82,6 +83,11 @@ const projects = [
 
 const Work = () => {
   const [data, setData] = useState(projects[0]);
+
+  const handleChange = (swiper) => {
+    const currentIndex = swiper.activeIndex;
+    setData(projects[currentIndex]);
+  };
   return (
     <>
       <motion.div
@@ -89,7 +95,7 @@ const Work = () => {
         animate={{ opacity: 1 }}
         className="min-h-[80vh] flex flex-col justify-center "
       >
-        <div className="container mx-auto">
+        <div className="container mx-auto w-full  flex-row flex justify-between ">
           <div className="flex flex-col md:flex-row xl:gap-[30px]">
             <div className="w-full  ">
               <div>
@@ -110,7 +116,7 @@ const Work = () => {
                 })}
               </ul>
               <div className="border border-white/20"></div>
-              <div className="flex gap-4 my-5">
+              <div className="flex gap-[30px] my-5">
                 <div>
                   <Link href={data.live}>
                     <TooltipProvider delayDuration={100}>
@@ -119,7 +125,7 @@ const Work = () => {
                           <GoArrowUpRight className="text-white text-2xl hover:text-accent" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p >live project</p>
+                          <p>live project</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -141,8 +147,21 @@ const Work = () => {
                 </div>
               </div>
             </div>
-
-            <div className="w-full ">slider</div>
+          </div>
+          <div className=" w-[50%]">
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              className="mb-12 onSlideChange={handleChange}"
+            >
+              {projects.map((curEle, index) => {
+                return <SwiperSlide>
+                  <img src="/assets/thumb1.png" alt="" />
+                  <img src="/assets/thumb2.png" alt="" />
+                  <img src="/assets/thumb3.png" alt="" />
+                </SwiperSlide>;
+              })}
+            </Swiper>
           </div>
         </div>
       </motion.div>
