@@ -75,7 +75,7 @@ const projects = [
         name: "BootStrap ",
       },
     ],
-    image: "/assets/thumb1.png",
+    image: "/assets/thumb2.png",
     live: "",
     github: "https://github.com/Umar7070/myportfolio",
   },
@@ -95,9 +95,9 @@ const Work = () => {
         animate={{ opacity: 1 }}
         className="min-h-[80vh] flex flex-col justify-center "
       >
-        <div className="container mx-auto w-full  flex-row flex justify-between ">
+        <div className="container mx-auto w-full  flex-col xl:flex-row flex justify-between gap-[30px]">
           <div className="flex flex-col md:flex-row xl:gap-[30px]">
-            <div className="w-full  ">
+            <div className="w-full">
               <div>
                 <div className="text-5xl font-semibold text-outline text-transparent hover:text-outline-hover transition-all duration-500">
                   {data.num}
@@ -156,9 +156,12 @@ const Work = () => {
             >
               {projects.map((curEle, index) => {
                 return <SwiperSlide>
-                  <img src="/assets/thumb1.png" alt="" />
-                  <img src="/assets/thumb2.png" alt="" />
-                  <img src="/assets/thumb3.png" alt="" />
+                  <div className="h-[200px] w-[400px] relative group flex justify-center items-center bg-pink-200">
+                    {
+                      // projects.image
+                      // <img src="{curele}" alt="" />
+                    }
+                  </div>
                 </SwiperSlide>;
               })}
             </Swiper>
