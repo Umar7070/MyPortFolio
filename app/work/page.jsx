@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
+import "swiper/css";
 import {
   Tooltip,
   TooltipContent,
@@ -74,6 +74,10 @@ const projects = [
       {
         name: "BootStrap ",
       },
+
+      {
+        name: "React.js ",
+      },
     ],
     image: "/assets/thumb2.png",
     live: "",
@@ -92,12 +96,12 @@ const Work = () => {
     <>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        animate={{ opacity: 1,transition:{delay:2.4 ,duration:0.5, ease:"easeIn"} }}
         className="min-h-[80vh] flex flex-col justify-center "
       >
         <div className="container mx-auto w-full  flex-col xl:flex-row flex justify-between gap-[30px]">
-          <div className="flex flex-col md:flex-row xl:gap-[30px]">
-            <div className="w-full">
+          <div className="flex flex-col order-2 xl:order-none  md:flex-row xl:gap-[30px]">
+            <div className="w-full   ">
               <div>
                 <div className="text-5xl font-semibold text-outline text-transparent hover:text-outline-hover transition-all duration-500">
                   {data.num}
@@ -148,21 +152,24 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className=" w-[50%]">
+          <div className=" w-[50%] order-1 xl:order-none">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
+              onSlideChange={handleChange}
               className="mb-12 onSlideChange={handleChange}"
             >
               {projects.map((curEle, index) => {
-                return <SwiperSlide>
-                  <div className="h-[200px] w-[400px] relative group flex justify-center items-center bg-pink-200">
-                    {
-                      // projects.image
-                      // <img src="{curele}" alt="" />
-                    }
-                  </div>
-                </SwiperSlide>;
+                return (
+                  <SwiperSlide>
+                    <div className="h-[250px] w-[350px] relative group flex justify-center items-center ">
+                    <div></div>
+                    <div className="h-full w-full relative">
+                      <Image src={curEle.image} fill className="object-cover"/>
+                    </div>
+                    </div>
+                  </SwiperSlide>
+                );
               })}
             </Swiper>
           </div>
