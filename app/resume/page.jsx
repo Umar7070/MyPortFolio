@@ -12,7 +12,8 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 const about = {
   title: "About me",
-  description:"My name is MOHAMMAD UMAR basically i'm from BANARAS i have completed my master of computer application (MCA) from KMCL University Lucknow. ",
+  description:
+    "My name is MOHAMMAD UMAR basically i'm from BANARAS i have completed my master of computer application (MCA) from KMCL University Lucknow. ",
 
   info: [
     {
@@ -45,7 +46,7 @@ const about = {
     },
     {
       fieldname: "Language",
-      fielvalue: " English , Arabic , Urdu ,Punjabi ",
+      fielvalue: " English, Arabic, Urdu,",
     },
   ],
 };
@@ -132,12 +133,12 @@ const education = {
   ],
 };
 
-// skill data
-const skill = {
-  title: "My Skill",
+// skills data
+const skills = {
+  title: "My Skills",
   description:
-    "  My skills are Html Css Bootstrap ,Tailwindcss Javascript React Js Next Js TypeScript",
-  skillList: [
+    "  My skillss are Html Css Bootstrap ,Tailwindcss Javascript React Js Next Js TypeScript",
+  skillsList: [
     {
       icon: <FaHtml5 />,
       name: "html5",
@@ -199,7 +200,7 @@ const Resume = () => {
           <TabsList className="flex flex-col max-w-[400px] w-full  mx-auto lg:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skill">Skill</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About</TabsTrigger>
           </TabsList>
 
@@ -207,9 +208,11 @@ const Resume = () => {
             {/* experience  */}
             <TabsContent value="experience">
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
-                <h3 className="text-3xl font-semibold">{experience.title}</h3>
-                <p className="text-white/60  ">{experience.description}</p>
-                <ScrollArea className="h-[350px]">
+                <h3 className="text-2xl font-semibold">{experience.title}</h3>
+                <p className="text-white/60 text-sm ">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[320px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((ele, index) => {
                       return (
@@ -218,7 +221,7 @@ const Resume = () => {
                           className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start rounded-md"
                         >
                           <span className="text-accent">{ele.duration}</span>
-                          <h3 className="text-xl">{ele.position}</h3>
+                          <h3 className="text-sm">{ele.position}</h3>
                           <div>
                             <p>{ele.company}</p>
                           </div>
@@ -232,9 +235,11 @@ const Resume = () => {
             {/* education  */}
             <TabsContent value="education">
               <div className="flex flex-col lg:grid-cols-2 gap-[30px] text-center lg:text-left">
-                <h3 className="text-3xl font-semibold">{education.title}</h3>
-                <p className=" text-white/60 ">{education.description}</p>
-                <ScrollArea className="h-[350px]">
+                <h3 className="text-2xl font-semibold">{education.title}</h3>
+                <p className=" text-white/60 text-sm">
+                  {education.description}
+                </p>
+                <ScrollArea className="h-[320px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((ele, index) => {
                       return (
@@ -243,7 +248,7 @@ const Resume = () => {
                           className="bg-[#232329] py-6 px-10 flex flex-col gap-1 items-center justify-center lg:items-start rounded-md"
                         >
                           <span className="text-accent">{ele.duration}</span>
-                          <h3 className="text-xl">{ele.degree}</h3>
+                          <h3 className="text-sm">{ele.degree}</h3>
                           <div>
                             <p>{ele.institutaion}</p>
                           </div>
@@ -254,22 +259,22 @@ const Resume = () => {
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* skill  */}
+            {/* skills  */}
 
-            <TabsContent value="skill">
+            <TabsContent value="skills">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-3xl text-center lg:text-start font-semibold">
-                  {skill.title}
+                <h3 className="text-2xl text-center lg:text-start font-semibold">
+                  {skills.title}
                 </h3>
-                <p className="text-white/60 ">{skill.description}</p>
+                <p className="text-white/60 text-sm ">{skills.description}</p>
               </div>
               <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] my-4">
-                {skill.skillList.map((ele, index) => {
+                {skills.skillsList.map((ele, index) => {
                   return (
                     <li>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-lg flex justify-center items-center gap-[30px]">
+                          <TooltipTrigger className="w-full h-[95px] bg-[#232329] rounded-lg flex justify-center items-center gap-[30px] my-6">
                             <div className="text-3xl hover:text-accent transition-all duration-300 ">
                               {ele.icon}
                             </div>
@@ -287,10 +292,10 @@ const Resume = () => {
             {/* about  */}
             <TabsContent value="about">
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-3xl font-semibold text-center lg:text-start">
+                <h3 className="text-2xl font-semibold text-center lg:text-start">
                   {about.title}
                 </h3>
-                <p className="text-white/60 ">{about.description}</p>
+                <p className="text-white/60 text-sm ">{about.description}</p>
                 <ul className="grid grid-col-1 lg:grid-cols-2 gap-y-6">
                   {about.info.map((ele, index) => {
                     return (
@@ -299,8 +304,10 @@ const Resume = () => {
                         className="flex justify-center items-center lg:justify-start gap-4"
                       >
                         {/* {ele.fieldname} */}
-                        <span className="text-white/60">{ele.fieldname}</span>
-                        <span className="text-xl">{ele.fielvalue}</span>
+                        <span className="text-white/60 text-sm">
+                          {ele.fieldname}
+                        </span>
+                        <span className="text-sm">{ele.fielvalue}</span>
                       </li>
                     );
                   })}

@@ -2,33 +2,31 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 // import {} from 'react-icons
-import { FaPhone } from "react-icons/fa"
+import { FaPhone } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { useState } from "react";
 
-const info =[
+const info = [
   {
-    iconn:<FaPhone/>,
-    title:'phone',
-    description:'(+91) 8176 83 7301'
+    iconn: <FaPhone />,
+    title: "phone",
+    description: "(+91) 8176 83 7301",
   },
   {
-    iconn:<MdOutlineEmail/>,
-    title:'email',
-    description:'mohdumar707080@gmail.com'
+    iconn: <MdOutlineEmail />,
+    title: "email",
+    description: "mohdumar707080@gmail.com",
   },
   {
-    iconn:<IoLocationOutline/>,
-    title:'address',
-    description:'Mohali 5 Phase sas nager'
+    iconn: <IoLocationOutline />,
+    title: "address",
+    description: "Mohali 5 Phase sas nager",
   },
-]
+];
 
 const page = () => {
-  const [iputData,setInputData]=useState({
-
-  })
+  const [iputData, setInputData] = useState({});
   return (
     <>
       <div className="container mx-auto">
@@ -37,7 +35,9 @@ const page = () => {
           <div className=" lg:w-[60%]  order-2 lg:order-none">
             <form className=" rounded-md bg-[#27272c] p-5 rounde gap-4">
               <h3 className="text-2xl text-accent">Let's work together</h3>
-              <p className="text-white/60 lg:mt-3">Lorem, ipsum dolor sit amet consectetur.</p>
+              <p className="text-white/60 lg:mt-3">
+                Lorem, ipsum dolor sit amet consectetur.
+              </p>
               {/* input  */}
               <div className="grid-cols-1 grid lg:grid-cols-2 gap-5 my-3">
                 <Input type="text" placeholder="Firstname" />
@@ -59,35 +59,38 @@ const page = () => {
                 </select>
               </div>
               <div>
-                <textarea name="" id="" rows='3' className="w-full bg-primary mt-5 rounded-sm outline-none px-4 "></textarea>
+                <textarea
+                  name=""
+                  id=""
+                  rows="3"
+                  className="w-full bg-primary mt-5 rounded-sm outline-none px-4 "
+                ></textarea>
               </div>
               <div>
                 <Button>send message</Button>
-
               </div>
             </form>
           </div>
           {/* info  */}
           <div className="flex-1 flex items-center lg:w-[40%] order-1 lg:order-none mb-5 lg:mb-0 ">
-            <div >
-             {
-              <ul className="flex flex-col gap-6">
-                {info.map((ele,index )=>{
-                  return <li key={index} className="flex items-center gap-6">
-                    <div className="text-accent">
-                      <div className="text-[20px]">
-                        {ele.iconn}
-                      </div>
-                    </div>
-                    <div>
-                      <p className="text-white/60">{ele.title}</p>
-                      <h3>{ele.description}</h3>
-                    </div>
-
-                  </li>
-                })}
-              </ul>
-             }
+            <div>
+              {
+                <ul className="flex flex-col gap-6">
+                  {info.map((ele, index) => {
+                    return (
+                      <li key={index} className="flex items-center gap-6">
+                        <div className="text-accent">
+                          <div className="text-[20px]">{ele.iconn}</div>
+                        </div>
+                        <div>
+                          <p className="text-white/60 text-sm">{ele.title}</p>
+                          <h3>{ele.description}</h3>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
             </div>
           </div>
         </div>

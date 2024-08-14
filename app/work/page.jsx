@@ -19,7 +19,7 @@ import { useState } from "react";
 const projects = [
   {
     num: "01",
-    category: "front-end",
+    category: "Front-end",
     title: "project 1",
     description:
       "Reprehenderit tempora, quo nobis  consequatur voluptatum odit repudiandae doloribus.",
@@ -63,7 +63,7 @@ const projects = [
 
   {
     num: "03",
-    category: "front-end",
+    category: "Front-end",
     title: "project 03",
     description:
       "Reprehenderit tempora, quo nobis distinctio consequatur voluptatum odit repudiandae doloribus quas tempore dolorem sed maxime rem?",
@@ -96,7 +96,10 @@ const Work = () => {
     <>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1,transition:{delay:2.4 ,duration:0.5, ease:"easeIn"} }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.5, ease: "easeIn" },
+        }}
         className="min-h-[80vh] flex flex-col justify-center "
       >
         <div className="container mx-auto w-full  flex-col xl:flex-row flex justify-between gap-[30px]">
@@ -106,8 +109,8 @@ const Work = () => {
                 <div className="text-5xl font-semibold text-outline text-transparent hover:text-outline-hover transition-all duration-500">
                   {data.num}
                 </div>
-                <h2 className="text-3xl">{data.category}project</h2>
-                <p className="text-white/60">{data.description}</p>
+                <h2 className="text-3xl my-1">{data.category}project</h2>
+                <p className="text-white/60 text-sm my-3">{data.description}</p>
               </div>
               <ul className="flex gap-4 text-accent">
                 {data.stack.map((curEle, index) => {
@@ -163,10 +166,14 @@ const Work = () => {
                 return (
                   <SwiperSlide>
                     <div className="h-[250px] w-[350px] relative group flex justify-center items-center ">
-                    <div></div>
-                    <div className="h-full w-full relative">
-                      <Image src={curEle.image} fill className="object-cover"/>
-                    </div>
+                      <div></div>
+                      <div className="h-full w-full relative">
+                        <Image
+                          src={curEle.image}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
                   </SwiperSlide>
                 );

@@ -12,11 +12,11 @@ const page = () => {
         <div className="flex flex-col xl:flex-row justify-between items-center">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Front-end Developer</span>
-            <h1 className="h1 mb-6">
+            <h1 className="h1 mb-3">
               Hello I'm <br />
               <span className="text-accent"> Umar Mohammad </span>
             </h1>
-            <p className="max-w-[500px] text-white/80">
+            <p className="max-w-[500px]  text-sm text-white/80">
               i excel at crafting elegent digital experiences and i am
               profesient in various programing languages and technologies
             </p>
