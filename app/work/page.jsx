@@ -103,8 +103,8 @@ const Work = () => {
         }}
         className="min-h-[80vh] flex flex-col justify-center "
       >
-        <div className="container mx-auto w-full  flex-col xl:flex-row flex justify-between gap-[30px]">
-          <div className="flex flex-col order-2 xl:order-none  md:flex-row xl:gap-[30px]">
+        <div className="container mx-auto w-full flex-col xl:flex-row flex justify-between gap-[30px]">
+          <div className="flex flex-col order-2 xl:order-none xl:w-1/2 w-full md:flex-row xl:gap-[30px]">
             <div className="w-full   ">
               <div>
                 <div className="text-5xl font-semibold text-outline text-transparent hover:text-outline-hover transition-all duration-500">
@@ -156,7 +156,7 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className=" w-[50%] order-1 xl:order-none">
+          <div className="order-1 xl:order-none xl:w-1/2 w-full">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -179,7 +179,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
-              <SliderBtn className='' />
+              <SliderBtn  />
             </Swiper>
           </div>
         </div>

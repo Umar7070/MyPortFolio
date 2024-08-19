@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 // import {} from 'react-icons'
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import { SheetClose } from "@/components/ui/sheet";
 
 const menuList = [
   {
@@ -47,9 +48,17 @@ const MobileNav = () => {
         <nav className="flex gap-4 flex-col justify-end items-center">
           {menuList.map((ele, index) => {
             return (
-              <Link href={ele.path} key={index} className={`${ele.path=== pathname && 'text-accent' } capitalize `}>
-                {ele.name}
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  href={ele.path}
+                  key={index}
+                  className={`${
+                    ele.path === pathname && "text-accent"
+                  } capitalize `}
+                >
+                  {ele.name}
+                </Link>
+              </SheetClose>
             );
           })}
         </nav>
