@@ -15,6 +15,7 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import SliderBtn from "@/components/SliderBtn";
 
 const projects = [
   {
@@ -166,7 +167,7 @@ const Work = () => {
                 return (
                   <SwiperSlide>
                     <div className="h-[250px] w-[350px] relative group flex justify-center items-center ">
-                      <div></div>
+                      <div className="relative" ></div>
                       <div className="h-full w-full relative">
                         <Image
                           src={curEle.image}
@@ -178,6 +179,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
+              <SliderBtn className='' />
             </Swiper>
           </div>
         </div>
