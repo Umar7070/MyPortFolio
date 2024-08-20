@@ -51,10 +51,10 @@ const page = () => {
                     Front-end Developer
                   </option>
                   <option class="text-gray-700" value="option2">
-                    Option 2
+                    Node js Developer
                   </option>
                   <option class="text-gray-700" value="option3">
-                    Option 3
+                    Web Designer
                   </option>
                 </select>
               </div>
