@@ -66,8 +66,8 @@ const page = () => {
                   className="w-full bg-primary mt-5 rounded-sm outline-none px-4 "
                 ></textarea>
               </div>
-              <div>
-                <Button>send message</Button>
+              <div >
+                <Button className='capitalize'>send message</Button>
               </div>
             </form>
           </div>
@@ -78,12 +78,12 @@ const page = () => {
                 <ul className="flex flex-col gap-6">
                   {info.map((ele, index) => {
                     return (
-                      <li key={index} className="flex items-center gap-6">
+                      <li key={index} className="flex items-center gap-5">
                         <div className="text-accent">
                           <div className="text-[20px]">{ele.iconn}</div>
                         </div>
                         <div>
-                          <p className="text-white/60 text-sm">{ele.title}</p>
+                          <p className="text-white/60 text-sm capitalize">{ele.title}</p>
                           <h3>{ele.description}</h3>
                         </div>
                       </li>

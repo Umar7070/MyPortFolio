@@ -13,12 +13,12 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "My name is MOHAMMAD UMAR basically i'm from BANARAS i have completed my master of computer application (MCA) from KMCL University Lucknow. ",
+    "My name is UMAR MOHAMMAD  basically i'm from MAU i have completed my master of computer application (MCA) from KMCL University Lucknow. ",
 
   info: [
     {
       fieldname: "Name",
-      fielvalue: "Mohammad Umar",
+      fielvalue: " Umar Mohammad",
     },
     {
       fieldname: "Phone",
@@ -46,7 +46,7 @@ const about = {
     },
     {
       fieldname: "Language",
-      fielvalue: " English, Arabic, Urdu,",
+      fielvalue: " English, Arabic, Urdu, Hindi",
     },
   ],
 };
@@ -137,7 +137,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "  My skillss are Html Css Bootstrap ,Tailwindcss Javascript React Js Next Js TypeScript",
+    "  My skills are Html Css Bootstrap ,Tailwindcss Javascript React Js Next Js TypeScript",
   skillsList: [
     {
       icon: <FaHtml5 />,
