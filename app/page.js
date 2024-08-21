@@ -17,7 +17,7 @@ const page = () => {
               <span className="text-accent"> Umar Mohammad </span>
             </h1>
             <p className="max-w-[500px]  text-sm text-white/80">
-              i excel at crafting elegent digital experiences and i am
+              I excel at crafting elegent digital experiences and i am
               profesient in various programing languages and technologies
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">

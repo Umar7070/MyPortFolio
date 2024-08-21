@@ -167,7 +167,6 @@ const Work = () => {
                 return (
                   <SwiperSlide>
                     <div className="h-[250px] w-[350px] relative group flex justify-center items-center ">
-                      <div className="relative" ></div>
                       <div className="h-full w-full relative">
                         <Image
                           src={curEle.image}
