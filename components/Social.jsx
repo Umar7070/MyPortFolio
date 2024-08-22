@@ -3,11 +3,11 @@ import Link from "next/link";
 const socialMedia = [
   {
     icon: <FaGithub />,
-    path: "",
+    path: "https://github.com/",
   },
   {
     icon: <FaLinkedinIn />,
-    path: "",
+    path: "linkedin.com/in/umar98",
   },
   {
     icon: <FaYoutube />,
