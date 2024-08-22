@@ -7,10 +7,10 @@ const SliderBtn = ({ containerStyles, btnStyles, iconsStyles }) => {
     <>
       <div className={containerStyles}>
         <button className={btnStyles} onClick={() => swiper.slidePrev()}>
-          <FaAngleLeft className={iconsStyles} />
+          <FaAngleLeft className='bg-accent' />
         </button>
         <button className={btnStyles} onClick={() => swiper.slideNext()}>
-          <FaAngleRight className={iconsStyles} />
+          <FaAngleRight className='bg-accent'/>
         </button>
       </div>
     </>

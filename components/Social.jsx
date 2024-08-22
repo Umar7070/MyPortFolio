@@ -1,4 +1,9 @@
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaInstagramSquare,
+  FaFacebookF,
+} from "react-icons/fa";
 import Link from "next/link";
 const socialMedia = [
   {
@@ -7,15 +12,16 @@ const socialMedia = [
   },
   {
     icon: <FaLinkedinIn />,
-    path: "linkedin.com/in/umar98",
+    // path: "linkedin.com/in/umar98",
+    path: "https://www.linkedin.com/in/umar98",
   },
   {
-    icon: <FaYoutube />,
-    path: "",
+    icon: <FaInstagramSquare />,
+    path: "https://www.instagram.com/ssarkar420/",
   },
   {
-    icon: <FaTwitter />,
-    path: "",
+    icon: <FaFacebookF />,
+    path: "https://www.facebook.com/",
   },
 ];
 const Social = ({ containerStyles, iconStyles }) => {

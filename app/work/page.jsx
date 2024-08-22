@@ -178,7 +178,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
-              <SliderBtn  />
+              <SliderBtn  containerStyles='flex gap-2 mt-3 justify-between xl:w-[60%] h-[20px w-[20px] text -accent'   />
             </Swiper>
           </div>
         </div>
