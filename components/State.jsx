@@ -12,7 +12,7 @@ const stateCountup = [
   },
   {
     num: "10",
-    Text: "Technologies Master",
+    Text: "Technology Master",
   },
   {
     num: "100",
@@ -23,7 +23,7 @@ const State = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <div className="grid grid-cols-2  xl:grid-cols-4 gap-6 max-w-[80vw] mx-auto xl:max-w-none my-3">
+        <div className="grid grid-cols-2  xl:grid-cols-4   max-w-[80vw] mx-auto xl:max-w-none ">
           {stateCountup.map((ele, index) => {
             return (
               <div className="flex-1 flex gap-3 justify-center items-center xl:justify-start my-10">

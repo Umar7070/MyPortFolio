@@ -5,7 +5,7 @@ const SliderBtn = ({ containerStyles, btnStyles, iconsStyles }) => {
   const swiper = useSwiper();
   return (
     <>
-      <div className={containerStyles}>
+      <div className={` flex justify-between  w-[88.5%] lg:w-[60%] md:w-[47.5%] my-2 ${containerStyles} ` } >
         <button className={btnStyles} onClick={() => swiper.slidePrev()}>
           <FaAngleLeft className='bg-accent' />
         </button>

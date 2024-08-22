@@ -5,14 +5,14 @@ import {
   FaFacebookF,
 } from "react-icons/fa";
 import Link from "next/link";
+import { MdOutlineEmail } from "react-icons/md";
 const socialMedia = [
   {
     icon: <FaGithub />,
-    path: "https://github.com/",
+    path: "https://github.com/Umar7070/myportfolio",
   },
   {
     icon: <FaLinkedinIn />,
-    // path: "linkedin.com/in/umar98",
     path: "https://www.linkedin.com/in/umar98",
   },
   {
@@ -20,7 +20,7 @@ const socialMedia = [
     path: "https://www.instagram.com/ssarkar420/",
   },
   {
-    icon: <FaFacebookF />,
+    icon: <MdOutlineEmail />,
     path: "https://www.facebook.com/",
   },
 ];

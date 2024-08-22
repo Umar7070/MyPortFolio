@@ -167,18 +167,18 @@ const Work = () => {
                 return (
                   <SwiperSlide>
                     <div className="h-[250px] w-[350px] relative group flex justify-center items-center ">
-                      <div className="h-full w-full relative">
+                      <div className="h-full w-full relative ">
                         <Image
                           src={curEle.image}
                           fill
-                          className="object-cover"
+                          className="object-cover w-full h-auto"
                         />
                       </div>
                     </div>
                   </SwiperSlide>
                 );
               })}
-              <SliderBtn  containerStyles='flex gap-2 mt-3 justify-between xl:w-[60%] h-[20px w-[20px] text -accent'   />
+              <SliderBtn    />
             </Swiper>
           </div>
         </div>
