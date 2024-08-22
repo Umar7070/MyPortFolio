@@ -2,10 +2,8 @@ import {
   FaGithub,
   FaLinkedinIn,
   FaInstagramSquare,
-  FaFacebookF,
 } from "react-icons/fa";
 import Link from "next/link";
-import { MdOutlineEmail } from "react-icons/md";
 const socialMedia = [
   {
     icon: <FaGithub />,
@@ -19,10 +17,7 @@ const socialMedia = [
     icon: <FaInstagramSquare />,
     path: "https://www.instagram.com/ssarkar420/",
   },
-  {
-    icon: <MdOutlineEmail />,
-    path: "https://www.facebook.com/",
-  },
+
 ];
 const Social = ({ containerStyles, iconStyles }) => {
   return (
