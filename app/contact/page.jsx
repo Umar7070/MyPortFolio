@@ -26,7 +26,14 @@ const info = [
 ];
 
 const page = () => {
-  const [iputData, setInputData] = useState({});
+  const [item, setItem] = useState({
+    fname:'',
+    lname:'',
+    email:"",
+    password:'',
+
+
+  });
   return (
     <>
       <div className="container mx-auto">
@@ -40,10 +47,10 @@ const page = () => {
               </p>
               {/* input  */}
               <div className="grid-cols-1 grid lg:grid-cols-2 gap-5 my-3">
-                <Input type="text" placeholder="Firstname" />
-                <Input type="text" placeholder="Lirstname" />
-                <Input type="text" placeholder="Email address" />
-                <Input type="password" placeholder="Password" />
+                <Input type="text" placeholder="Firstname" name='fname'  />
+                <Input type="text" placeholder="LastName" name='lname'  />
+                <Input type="text" placeholder="EmailAddress" name='email' />
+                <Input type="password" placeholder="Password" name='password'/>
               </div>
               <div className="">
                 <select className="w-full bg-primary p-2 px-2 rounded-md outline-none">
