@@ -25,15 +25,7 @@ const info = [
 ];
 
 const page = () => {
-  const [item, setItem] = useState({
-    fname:'',
-    lname:'',
-    email:"",
-    password:'',
-
-
-  });
-  console.log(item)
+ 
   return (
     <>
       <div className="container mx-auto">
@@ -47,10 +39,10 @@ const page = () => {
               </p>
               {/* input  */}
               <div className="grid-cols-1 grid lg:grid-cols-2 gap-5 my-3">
-                <Input type="text" placeholder="Firstname" name='fname'  value={item.fname}  />
-                <Input type="text" placeholder="LastName" name='lname'  value={item.lname} />
-                <Input type="text" placeholder="EmailAddress" name='email' value={item.email} />
-                <Input type="password" placeholder="Password" name='password' value={item.email} />
+                <Input type="text" placeholder="Firstname" name='fname'   />
+                <Input type="text" placeholder="LastName" name='lname'  />
+                <Input type="text" placeholder="EmailAddress" name='email' />
+                <Input type="password" placeholder="Password" name='password' />
               </div>
               <div className="">
                 <select className="w-full bg-primary p-2 px-2 rounded-md outline-none">
