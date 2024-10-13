@@ -1,7 +1,6 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-// import {} from 'react-icons
 import { FaPhone } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
@@ -10,18 +9,18 @@ import { useState } from "react";
 const info = [
   {
     iconn: <FaPhone />,
-    title: "phone",
+    title: "Phone",
     description: "(+91) 8176 83 7301",
   },
   {
     iconn: <MdOutlineEmail />,
-    title: "email",
+    title: "Email",
     description: "mohdumar707080@gmail.com",
   },
   {
     iconn: <IoLocationOutline />,
-    title: "address",
-    description: "Mohali 5 Phase sas nager",
+    title: "Address",
+    description: "Mohali 5 Phase Sas Nager",
   },
 ];
 
